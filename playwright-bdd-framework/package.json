@@ -1,0 +1,32 @@
+{
+  "name": "playwright-bdd-framework",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BDD automation framework using Playwright, Cucumber, and TypeScript",
+  "scripts": {
+    "test:bdd": "cross-env TEST_ENV=qa tsx ./test-runner/runner.ts",
+    "test:bdd:html": "cross-env TEST_ENV=qa tsx ./test-runner/runner.ts --format html:reports/cucumber-report.html",
+    "test:bdd:headed": "cross-env TEST_ENV=qa HEADLESS=false tsx ./test-runner/runner.ts",
+    "test:bdd:smoke": "cross-env TEST_ENV=qa tsx ./test-runner/runner.ts --tags @smoke",
+    "test:bdd:regression": "cross-env TEST_ENV=qa tsx ./test-runner/runner.ts --tags @regression",
+    "test:feature": "cross-env TEST_ENV=qa tsx ./test-runner/runner.ts features/login.feature"
+  },
+  "keywords": [
+    "playwright",
+    "cucumber",
+    "bdd",
+    "typescript"
+  ],
+  "author": "Copilot",
+  "license": "MIT",
+  "dependencies": {
+    "@cucumber/cucumber": "^11.0.1",
+    "@playwright/test": "^1.50.0",
+    "cross-env": "^7.0.0",
+    "dotenv": "^16.4.7",
+    "playwright": "^1.50.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

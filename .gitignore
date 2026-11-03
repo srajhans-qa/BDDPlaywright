@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Playwright output
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+playwright/.auth/
+
+# BDD framework output
+.features-gen/
+playwright-bdd-framework/reports/
+playwright-bdd-framework/screenshots/
+
+# Not part of the project
+*.DOC
+*.doc
